@@ -62,7 +62,7 @@ app.use((
 
 
 // Nav to login pg by default
-app.get('/', (req: Request, res: Response) => {
+app.get('/*', (req: Request, res: Response) => {
   const { mail, utorid, affiliation, "persistent-id": pId } = req.headers;
   console.log(mail, utorid, affiliation, pId);
   
