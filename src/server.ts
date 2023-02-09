@@ -66,7 +66,7 @@ app.get('/*', (req: Request, res: Response) => {
   const { mail, utorid, affiliation, "persistent-id": pId } = req.headers;
   console.log(mail, utorid, affiliation, pId);
   
-  res.sendStatus(200)
+  res.json({ mail, utorid, affiliation, pId });
   // res.sendFile('login.html', { root: viewsDir });
 });
 
